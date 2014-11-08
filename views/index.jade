@@ -1,5 +1,37 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  nav.navbar.navbar-default.navbar-fixed-top
+    div.container
+      div.navbar-header.page-scroll
+        button(type="button", class="navbar-toggle", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        a(href="#page-top", class="navbar-brand page-scroll") Health & Swellness
+      div.collapse navbar-collapse#bs-example-navbar-collapse-1
+        ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href="#page-top")
+            li
+              a(class="page-scroll", href="#services") Services
+            li
+              a(class="page-scroll", href="#portfolio") Portfolio
+            li
+              a(class="page-scroll", href="#about") About
+            li
+              a(class="page-scroll", href="#team") Team
+            li
+              a(class="page-scroll", href="#contact") Contact
+
+  header
+    div.container
+      div.intro-text
+        //h1.intro-lead-in= title
+        div.fill-box(class=(state === 1)? 'green':(state === 2 || state ===4)?'yellow':'red')
+        div.intro-heading(class=(state === 1)? 'vis':'invis') You're A-OK!
+        div.intro-heading(class=(state === 2)? 'vis':'invis') Your ankle has begun to swell. Please begin RICE.
+        div.intro-heading(class=(state === 3)? 'vis':'invis') Your ankle is very swollen. RICE now.
+        div.intro-heading(class=(state === 4)? 'vis':'invis') Your RICE is beginning to pay off. Keep up the good work.
