@@ -73,6 +73,9 @@ var temperatures = new Array();
 
 var state = "cal"; //"cal","green","yellow","red"
 var baseline = 0;
+
+var state_value = 0;
+
 function process(data){
 	var s = data.split(' ').slice(0,data.split(' ').length-1).map(hexToInt).map(intToAscii).join('');
     console.log(s)
@@ -107,14 +110,21 @@ function process(data){
     		trend = fitLine(pressures);
     		//console.log(trend.line().m)
     		if (p < yellow_zone * baseline && state != "green"){
-    			state = "green"
+    			state = "green";
+    			state_value = 1;
     			console.log(state)
     		}else if(p >= yellow_zone * baseline && p < red_zone *baseline && state != "yellow"){
-    			state = "yellow"
+    			state = "yellow";
+    			if(trend.line().m > 0){
+    				state_value = 2;
+    			}else{
+    				state_value = 4;
+    			}
     			console.log(state)
     		}else if(p >= red_zone * baseline && state != "red"){
     			//send text
     			state = "red"
+    			state_value = 3;
     			console.log(state)
     		}
     	}
@@ -129,15 +139,6 @@ sp.on('open',function(){
     sp.on('data', process);
 });
 
-var s = '{"P":123,"T":123.34}'
-try{
-	var data = JSON.parse(s)
-}catch(e){
-	console.log(e)
-}
-
-console.log(data.P,data.T)
-
 /*client.messages.create({
     body: "You're beginning to swell! Go to ___ for assistance.",
     to: "+16508148524",
@@ -149,11 +150,7 @@ console.log(data.P,data.T)
 
 /* GET home page. */
 router.get('/', function(req, res) {
-<<<<<<< HEAD
-  res.render('index', { title: title });
-=======
-  res.render('index', {title: 'Welcome to Rice Checker', state: 2});
->>>>>>> 041b619c0754091d79e72c60433713a26f8e51cb
+  res.render('index', {title: 'Welcome to Rice Checker', state: state_value});
 });
 
 module.exports = router;
