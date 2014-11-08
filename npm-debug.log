@@ -1,163 +1,116 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node',
-1 verbose cli   '/usr/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'express-generator',
-1 verbose cli   '-g' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink /usr/bin/node
-5 verbose cache add [ 'express-generator', null ]
-6 verbose cache add name=undefined spec="express-generator" args=["express-generator",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'express-generator',
-7 verbose parsed url   path: 'express-generator',
-7 verbose parsed url   href: 'express-generator' }
-8 silly lockFile 198a68d8-express-generator express-generator
-9 verbose lock express-generator /home/brendan/.npm/198a68d8-express-generator.lock
-10 silly lockFile 198a68d8-express-generator express-generator
-11 silly lockFile 198a68d8-express-generator express-generator
-12 verbose addNamed [ 'express-generator', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile bd41e3d3-express-generator express-generator@
-15 verbose lock express-generator@ /home/brendan/.npm/bd41e3d3-express-generator.lock
-16 silly addNameRange { name: 'express-generator', range: '*', hasData: false }
-17 verbose request where is /express-generator
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 3d893262df0f78a1
-20 verbose url raw /express-generator
-21 verbose url resolving [ 'https://registry.npmjs.org/', './express-generator' ]
-22 verbose url resolved https://registry.npmjs.org/express-generator
-23 verbose request where is https://registry.npmjs.org/express-generator
-24 info trying registry request attempt 1 at 02:27:14
-25 http GET https://registry.npmjs.org/express-generator
-26 http 200 https://registry.npmjs.org/express-generator
-27 silly registry.get cb [ 200,
-27 silly registry.get   { date: 'Sat, 08 Nov 2014 07:27:14 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     etag: '"D8MAOBCOVFO78JBUQNLK8DEX0"',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=60',
-27 silly registry.get     'content-length': '12149',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
-27 silly registry.get     'x-cache': 'MISS',
-27 silly registry.get     'x-cache-hits': '0',
-27 silly registry.get     'x-timer': 'S1415431634.490115,VS0,VE159',
-27 silly registry.get     vary: 'Accept',
-27 silly registry.get     'keep-alive': 'timeout=10, max=50',
-27 silly registry.get     connection: 'Keep-Alive' } ]
-28 silly addNameRange number 2 { name: 'express-generator', range: '*', hasData: true }
-29 silly addNameRange versions [ 'express-generator',
-29 silly addNameRange   [ '1.0.0', '3.0.0', '4.0.0', '4.2.0', '4.8.0', '4.9.0' ] ]
-30 verbose addNamed [ 'express-generator', '4.9.0' ]
-31 verbose addNamed [ '4.9.0', '4.9.0' ]
-32 silly lockFile 0580e4a0-express-generator-4-9-0 express-generator@4.9.0
-33 verbose lock express-generator@4.9.0 /home/brendan/.npm/0580e4a0-express-generator-4-9-0.lock
-34 silly lockFile 995b2f4d-ator-express-generator-4-9-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz
-35 verbose lock https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz /home/brendan/.npm/995b2f4d-ator-express-generator-4-9-0-tgz.lock
-36 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz',
-36 verbose addRemoteTarball   'f5da999d12ae4b072f6e61055633f7ad9e49fd73' ]
-37 info retry fetch attempt 1 at 02:27:15
-38 verbose fetch to= /tmp/npm-24108-3JZyV1au/registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz
-39 http GET https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz
-40 http 200 https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz
-41 silly lockFile 995b2f4d-ator-express-generator-4-9-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz
-42 silly lockFile 995b2f4d-ator-express-generator-4-9-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz
-43 silly lockFile 0580e4a0-express-generator-4-9-0 express-generator@4.9.0
-44 silly lockFile 0580e4a0-express-generator-4-9-0 express-generator@4.9.0
-45 silly lockFile bd41e3d3-express-generator express-generator@
-46 silly lockFile bd41e3d3-express-generator express-generator@
-47 silly resolved [ { name: 'express-generator',
-47 silly resolved     description: 'Express\' application generator',
-47 silly resolved     version: '4.9.0',
-47 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
-47 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
-47 silly resolved     keywords:
-47 silly resolved      [ 'express',
-47 silly resolved        'framework',
-47 silly resolved        'sinatra',
-47 silly resolved        'web',
-47 silly resolved        'rest',
-47 silly resolved        'restful',
-47 silly resolved        'router',
-47 silly resolved        'app',
-47 silly resolved        'api' ],
-47 silly resolved     repository: { type: 'git', url: 'https://github.com/expressjs/generator' },
-47 silly resolved     license: 'MIT',
-47 silly resolved     dependencies: { commander: '1.3.2', mkdirp: '0.5.0' },
-47 silly resolved     main: 'bin/express',
-47 silly resolved     preferGlobal: true,
-47 silly resolved     bin: { express: './bin/express' },
-47 silly resolved     devDependencies:
-47 silly resolved      { mocha: '~1.21.4',
-47 silly resolved        rimraf: '~2.2.8',
-47 silly resolved        should: '~4.0.4',
-47 silly resolved        supertest: '~0.13.0' },
-47 silly resolved     engines: { node: '>= 0.8.0' },
-47 silly resolved     files: [ 'LICENSE', 'bin/', 'templates/' ],
-47 silly resolved     scripts:
-47 silly resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
-47 silly resolved        'test-travis': 'mocha --reporter spec --bail --check-leaks test/' },
-47 silly resolved     gitHead: 'd00f7fc2c9e3a1f22f740019bab64fc0f579146d',
-47 silly resolved     bugs: { url: 'https://github.com/expressjs/generator/issues' },
-47 silly resolved     homepage: 'https://github.com/expressjs/generator',
-47 silly resolved     _id: 'express-generator@4.9.0',
-47 silly resolved     _shasum: 'f5da999d12ae4b072f6e61055633f7ad9e49fd73',
-47 silly resolved     _from: 'express-generator@',
-47 silly resolved     _npmVersion: '1.4.21',
-47 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
-47 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
-47 silly resolved     dist:
-47 silly resolved      { shasum: 'f5da999d12ae4b072f6e61055633f7ad9e49fd73',
-47 silly resolved        tarball: 'http://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz' },
-47 silly resolved     directories: {},
-47 silly resolved     _resolved: 'https://registry.npmjs.org/express-generator/-/express-generator-4.9.0.tgz' } ]
-48 info install express-generator@4.9.0 into /usr/lib
-49 info installOne express-generator@4.9.0
-50 verbose lib/node_modules/express-generator unbuild
-51 verbose tar unpack /home/brendan/.npm/express-generator/4.9.0/package.tgz
-52 silly lockFile 73f1f6cd-b-node-modules-express-generator tar:///usr/lib/node_modules/express-generator
-53 verbose lock tar:///usr/lib/node_modules/express-generator /home/brendan/.npm/73f1f6cd-b-node-modules-express-generator.lock
-54 silly lockFile 8c29d2f0-ress-generator-4-9-0-package-tgz tar:///home/brendan/.npm/express-generator/4.9.0/package.tgz
-55 verbose lock tar:///home/brendan/.npm/express-generator/4.9.0/package.tgz /home/brendan/.npm/8c29d2f0-ress-generator-4-9-0-package-tgz.lock
-56 silly gunzTarPerm modes [ '775', '664' ]
-57 error Error: EACCES, mkdir '/usr/lib/node_modules/express-generator'
-57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/express-generator']
-57 error   errno: 3,
-57 error   code: 'EACCES',
-57 error   path: '/usr/lib/node_modules/express-generator',
-57 error   fstream_type: 'Directory',
-57 error   fstream_path: '/usr/lib/node_modules/express-generator',
-57 error   fstream_class: 'DirWriter',
-57 error   fstream_stack:
-57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
-57 error      'Object.oncomplete (fs.js:107:15)' ] }
-58 error Please try running this command again as root/Administrator.
-59 error System Linux 3.11.0-26-generic
-60 error command "/usr/bin/node" "/usr/bin/npm" "install" "express-generator" "-g"
-61 error cwd /home/brendan/HHack/HackHolyoke
-62 error node -v v0.10.33
-63 error npm -v 1.4.28
-64 error path /usr/lib/node_modules/express-generator
-65 error fstream_path /usr/lib/node_modules/express-generator
-66 error fstream_type Directory
-67 error fstream_class DirWriter
-68 error code EACCES
-69 error errno 3
-70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/express-generator'
-71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
-71 error fstream_stack Object.oncomplete (fs.js:107:15)
-72 verbose exit [ 3, true ]
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/brendan/HHack/HackHolyoke',
+6 verbose install   [ 'express',
+6 verbose install     'body-parser',
+6 verbose install     'cookie-parser',
+6 verbose install     'morgan',
+6 verbose install     'serve-favicon',
+6 verbose install     'debug',
+6 verbose install     'jade' ] ]
+7 info preinstall HackHolyoke@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping express@~4.9.0 /home/brendan/HHack/HackHolyoke
+10 verbose already installed skipping body-parser@~1.8.1 /home/brendan/HHack/HackHolyoke
+11 verbose already installed skipping cookie-parser@~1.3.3 /home/brendan/HHack/HackHolyoke
+12 verbose already installed skipping morgan@~1.3.0 /home/brendan/HHack/HackHolyoke
+13 verbose already installed skipping serve-favicon@~2.1.3 /home/brendan/HHack/HackHolyoke
+14 verbose already installed skipping debug@~2.0.0 /home/brendan/HHack/HackHolyoke
+15 verbose already installed skipping jade@~1.6.0 /home/brendan/HHack/HackHolyoke
+16 silly resolved []
+17 info build /home/brendan/HHack/HackHolyoke
+18 verbose linkStuff [ false, false, false, '/home/brendan/HHack' ]
+19 info linkStuff HackHolyoke@0.0.0
+20 verbose linkBins HackHolyoke@0.0.0
+21 verbose linkMans HackHolyoke@0.0.0
+22 verbose rebuildBundles HackHolyoke@0.0.0
+23 verbose rebuildBundles [ '.bin',
+23 verbose rebuildBundles   'body-parser',
+23 verbose rebuildBundles   'cookie-parser',
+23 verbose rebuildBundles   'debug',
+23 verbose rebuildBundles   'express',
+23 verbose rebuildBundles   'jade',
+23 verbose rebuildBundles   'morgan',
+23 verbose rebuildBundles   'serialport',
+23 verbose rebuildBundles   'serve-favicon' ]
+24 verbose rebuild bundle /home/brendan/HHack/HackHolyoke/node_modules/serialport
+25 info build /home/brendan/HHack/HackHolyoke/node_modules/serialport
+26 info preinstall serialport@1.4.6
+27 verbose linkStuff [ false,
+27 verbose linkStuff   false,
+27 verbose linkStuff   false,
+27 verbose linkStuff   '/home/brendan/HHack/HackHolyoke/node_modules' ]
+28 info linkStuff serialport@1.4.6
+29 verbose linkBins serialport@1.4.6
+30 verbose link bins [ { serialportlist: './bin/serialportList.js',
+30 verbose link bins     serialportterm: './bin/serialportTerminal.js' },
+30 verbose link bins   '/home/brendan/HHack/HackHolyoke/node_modules/.bin',
+30 verbose link bins   false ]
+31 verbose linkMans serialport@1.4.6
+32 verbose rebuildBundles serialport@1.4.6
+33 verbose rebuildBundles [ '.bin',
+33 verbose rebuildBundles   'async',
+33 verbose rebuildBundles   'bindings',
+33 verbose rebuildBundles   'nan',
+33 verbose rebuildBundles   'node-pre-gyp',
+33 verbose rebuildBundles   'optimist',
+33 verbose rebuildBundles   'sf' ]
+34 verbose rebuild bundle /home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/node-pre-gyp
+35 info build /home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/node-pre-gyp
+36 info preinstall node-pre-gyp@0.5.19
+37 verbose linkStuff [ false,
+37 verbose linkStuff   false,
+37 verbose linkStuff   false,
+37 verbose linkStuff   '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules' ]
+38 info linkStuff node-pre-gyp@0.5.19
+39 verbose linkBins node-pre-gyp@0.5.19
+40 verbose link bins [ { 'node-pre-gyp': './bin/node-pre-gyp' },
+40 verbose link bins   '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/.bin',
+40 verbose link bins   false ]
+41 verbose linkMans node-pre-gyp@0.5.19
+42 verbose rebuildBundles node-pre-gyp@0.5.19
+43 verbose rebuildBundles [ '.bin',
+43 verbose rebuildBundles   'mkdirp',
+43 verbose rebuildBundles   'nopt',
+43 verbose rebuildBundles   'npmlog',
+43 verbose rebuildBundles   'rc',
+43 verbose rebuildBundles   'request',
+43 verbose rebuildBundles   'rimraf',
+43 verbose rebuildBundles   'semver',
+43 verbose rebuildBundles   'tar',
+43 verbose rebuildBundles   'tar-pack' ]
+44 verbose rebuild bundle /home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/node-pre-gyp/node_modules/mkdirp
+45 info build /home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/node-pre-gyp/node_modules/mkdirp
+46 info preinstall mkdirp@0.5.0
+47 verbose linkStuff [ false,
+47 verbose linkStuff   false,
+47 verbose linkStuff   false,
+47 verbose linkStuff   '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/node-pre-gyp/node_modules' ]
+48 info linkStuff mkdirp@0.5.0
+49 verbose linkBins mkdirp@0.5.0
+50 verbose link bins [ { mkdirp: 'bin/cmd.js' },
+50 verbose link bins   '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/node-pre-gyp/node_modules/.bin',
+50 verbose link bins   false ]
+51 verbose linkMans mkdirp@0.5.0
+52 verbose rebuildBundles mkdirp@0.5.0
+53 verbose rebuildBundles [ 'minimist' ]
+54 error Error: EACCES, unlink '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/.bin/node-pre-gyp'
+54 error  { [Error: EACCES, unlink '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/.bin/node-pre-gyp']
+54 error   errno: 3,
+54 error   code: 'EACCES',
+54 error   path: '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/.bin/node-pre-gyp' }
+55 error Please try running this command again as root/Administrator.
+56 error System Linux 3.11.0-26-generic
+57 error command "/usr/bin/node" "/usr/bin/npm" "install"
+58 error cwd /home/brendan/HHack/HackHolyoke
+59 error node -v v0.10.33
+60 error npm -v 1.4.28
+61 error path /home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/.bin/node-pre-gyp
+62 error code EACCES
+63 error errno 3
+64 error stack Error: EACCES, unlink '/home/brendan/HHack/HackHolyoke/node_modules/serialport/node_modules/.bin/node-pre-gyp'
+65 verbose exit [ 3, true ]
