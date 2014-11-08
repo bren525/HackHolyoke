@@ -1,8 +1,36 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+.vis {
+	display: block;
+}
+
+.invis {
+	display: none;
+}
+
+.ph1, .ph2, .ph3, .ph4 {
+	color: #fff;
+	font-size: 48px;
+	width: 100%;
+	text-align: center;
+}
+
+.ph1 {
+  background-color:#33CC33;
+}
+
+.ph2, .ph4 {
+  background-color:#FFCC00;
+}
+
+.ph3 {
+  background-color:#FF0000;
 }

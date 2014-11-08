@@ -149,7 +149,11 @@ console.log(data.P,data.T)
 
 /* GET home page. */
 router.get('/', function(req, res) {
+<<<<<<< HEAD
   res.render('index', { title: title });
+=======
+  res.render('index', {title: 'Welcome to Rice Checker', state: 2});
+>>>>>>> 041b619c0754091d79e72c60433713a26f8e51cb
 });
 
 module.exports = router;
